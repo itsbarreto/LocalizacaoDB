@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "30049637132",
+    "firebase_url": "https://localizacaodb.firebaseio.com",
+    "project_id": "localizacaodb",
+    "storage_bucket": "localizacaodb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:30049637132:android:a8a5f6a272df4ff9",
+        "android_client_info": {
+          "package_name": "priceranking.app.italobarreto.localizacaodb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "30049637132-u215le04a81orta74sfalaoqdmqb10eq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "priceranking.app.italobarreto.localizacaodb",
+            "certificate_hash": "de2cda3020759fe1216c9e5294bc7b3d2af0d79b"
+          }
+        },
+        {
+          "client_id": "30049637132-12qpqv6lqelq03bg2amadtru1le2p6vk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACqDrcPjEfj8YMOFYrZdsjB0-johLGCIE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "30049637132-12qpqv6lqelq03bg2amadtru1le2p6vk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
