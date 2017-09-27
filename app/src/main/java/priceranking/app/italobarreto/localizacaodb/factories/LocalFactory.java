@@ -13,12 +13,11 @@ public class LocalFactory {
     public static final Field[] CAMPOS_CLASS_PLACES = Place.class.getFields();
 
     public static StringBuilder montaStringLugar(Place lugar, double probabilidade){
-        StringBuilder strRetorno = new StringBuilder();
-        strRetorno.append(String.format("\n\n==============\nPlace: '%s' \n Likelihood: %g",
-                lugar.getName(),
-                probabilidade)).
-                append("\nAtribuicoes: ").
-                append(lugar.getAttributions()).
+        StringBuilder strRetorno = new StringBuilder("\n\n==============\nPlace: ").append(lugar.getName());
+        if(probabilidade != -1){
+            strRetorno.append("\n Likelihood: ").append(probabilidade);
+        }
+        strRetorno.
                 append("\nTipo: ");
 
         for (int l : lugar.getPlaceTypes()){
@@ -37,9 +36,12 @@ public class LocalFactory {
                 }
             }
         }
+
         return strRetorno;
 
     }
 
-
+    public static StringBuilder montaStringLugar(Place lugar) {
+        return montaStringLugar(lugar,-1);
+    }
 }

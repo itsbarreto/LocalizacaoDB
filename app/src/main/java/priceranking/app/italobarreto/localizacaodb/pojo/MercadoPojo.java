@@ -1,5 +1,7 @@
 package priceranking.app.italobarreto.localizacaodb.pojo;
 
+import java.util.Date;
+
 /**
  * Created by root on 26/09/17.
  */
@@ -9,7 +11,8 @@ public class MercadoPojo {
     private double longitue;
     private double latitude;
     private String urlImg;
-
+    private String usuIdReg;
+    private long msDateIncl;
     public MercadoPojo() {
     }
 
@@ -43,5 +46,22 @@ public class MercadoPojo {
 
     public void setUrlImg(String urlImg) {
         this.urlImg = urlImg;
+    }
+
+
+    public String getUsuIdReg() {
+        return usuIdReg;
+    }
+
+    public void setUsuIdReg(String usuIdReg) {
+        this.usuIdReg = usuIdReg;
+    }
+
+    public long getMsDateIncl() {
+        return msDateIncl;
+    }
+
+    public void setMsDateIncl(long msDateIncl) {
+        this.msDateIncl = msDateIncl;
     }
 }

@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/mipmap-mdpi/logo001.png",
+        "source": "/home/italo/Projeto/LocalizacaoDB/app/src/main/res/mipmap-mdpi/logo001.png"
+    },
+    {
+        "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/mipmap-mdpi/ic_launcher_round.png",
+        "source": "/home/italo/Projeto/LocalizacaoDB/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/mipmap-mdpi/ic_launcher.png",
+        "source": "/home/italo/Projeto/LocalizacaoDB/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+    }
+]
