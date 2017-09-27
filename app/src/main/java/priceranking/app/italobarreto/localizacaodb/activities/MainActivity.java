@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 
 
         //Texto com o nome do usuario
-        tvUsuario.setText(firebaseAuth.getCurrentUser().getEmail());
+        tvUsuario.setText(firebaseAuth.getCurrentUser().getDisplayName());
 
         mGoogleApiClient = new GoogleApiClient
                 .Builder(this)

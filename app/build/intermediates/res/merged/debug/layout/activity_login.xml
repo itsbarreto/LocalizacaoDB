@@ -1,51 +1,90 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_horizontal"
-    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="priceranking.app.italobarreto.localizacaodb.activities.LoginActivity">
+    tools:context="priceranking.app.italobarreto.localizacaodb.activities.LoginActivity"
+    android:weightSum="1"
+    tools:layout_editor_absoluteY="25dp"
+    tools:layout_editor_absoluteX="0dp">
 
-    <!-- Login progress -->
+
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/id_bto_login_fb"
+        android:layout_width="0dp"
+        android:layout_height="26dp"
+        android:layout_gravity="center_vertical|fill_horizontal"
+        android:layout_weight="0.04"
+        tools:layout_editor_absoluteY="208dp"
+        tools:layout_editor_absoluteX="16dp" />
+
+
     <ProgressBar
         android:id="@+id/login_progress"
         style="?android:attr/progressBarStyleLarge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:visibility="gone" />
+        android:visibility="gone"
+        tools:layout_editor_absoluteY="16dp"
+        tools:layout_editor_absoluteX="16dp" />
 
-    <ScrollView
-        android:id="@+id/login_form"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline"
+        app:layout_constraintGuide_begin="20dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="20dp" />
 
-        <LinearLayout
-            android:id="@+id/email_login_form"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline2"
+        app:layout_constraintGuide_begin="20dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteY="20dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/id_bto_login_google"
+        android:layout_width="0dp"
+        android:layout_height="43dp"
+        android:layout_gravity="center_vertical|fill_horizontal"
+        app:buttonSize="standard"
+        tools:layout_editor_absoluteY="274dp"
+        tools:layout_editor_absoluteX="17dp" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline3"
+        app:layout_constraintGuide_begin="20dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteY="20dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline4"
+        app:layout_constraintGuide_begin="20dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline5"
+        app:layout_constraintGuide_begin="20dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteY="20dp"
+        tools:layout_editor_absoluteX="0dp" />
 
 
-            <com.facebook.login.widget.LoginButton
-                android:id="@+id/login_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="30dp"
-                android:layout_marginTop="30dp" />
-
-            <com.google.android.gms.common.SignInButton
-                android:id="@+id/sign_in_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-
-        </LinearLayout>
-    </ScrollView>
-
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>
