@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Qual mercado?</string>
+    <string name="app_name">Comprices</string>
     <string name="title_activity_login">Login</string>
     <string name="str_confirm_lclz">Precisamos da sua localização para encontrarmos o mercado.</string>
 

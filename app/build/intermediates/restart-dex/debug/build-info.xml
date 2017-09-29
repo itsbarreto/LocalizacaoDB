@@ -6,48 +6,36 @@
     density="xxxhdpi"
     format="10"
     plugin-version="2.3.3"
-    timestamp="1506521886879"
+    timestamp="1506684952527"
     token="-8397827875580773433"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="306" />
+        duration="325" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="22" />
+        duration="64" />
     <task
         name="verifier"
-        duration="3" />
+        duration="14" />
 
     <artifact
-        location="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
+        location="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
         type="SPLIT" />
-    <artifact
-        location="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
-        type="SPLIT" />
-    <artifact
-        location="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
-        type="SPLIT" />
-    <artifact
-        location="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
-        type="SPLIT" />
-    <artifact
-        location="/home/italo/Projeto/LocalizacaoDB/app/build/outputs/apk/app-debug.apk"
-        type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1506520706903"
+        timestamp="1506684737048"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
+            location="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
             type="SPLIT" />
         <artifact
-            location="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+            location="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
             type="SPLIT" />
         <artifact
             location="/home/italo/Projeto/LocalizacaoDB/app/build/outputs/apk/app-debug.apk"
@@ -82,38 +70,7 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1506521761704"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
-            type="SPLIT" />
-    </build>
-    <build
-        build-mode="COLD"
-        timestamp="1506521886879"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/italo/Projeto/LocalizacaoDB/app/build/outputs/apk/app-debug.apk"
-            type="SPLIT_MAIN" />
-    </build>
-    <build
-        build-mode="COLD"
-        timestamp="1506522870658"
+        timestamp="1506684952527"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/split-apk/debug/slices/slice_2.apk"

@@ -42,6 +42,9 @@ import priceranking.app.italobarreto.localizacaodb.factories.LocalFactory;
 import priceranking.app.italobarreto.localizacaodb.pojo.MercadoPojo;
 
 public class MainActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener {
+
+    private final Double LIMIAR_PERTENCIMENTO_LOCAL = 0.80;
+
     private DatabaseReference dbRef = FirebaseDatabase.getInstance().getReference();
     private DatabaseReference mercadoReferencia = dbRef.child("mercados");
 
@@ -76,8 +79,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 
 
     }
-
-
 
 
     final private int REQUEST_CODE_ASK_PERMISSIONS = 123;
@@ -118,19 +119,18 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                         public void onClick(DialogInterface dialog, int which) {
                             //Roda a pesqisa de lugar com um timer de 2 segundos.
                             new Timer().schedule(
-                                        new TimerTask() {
-                                            @Override
-                                            public void run() {
-                                                if (checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
-                                                    pesquisaLugarAtual(Places.PlaceDetectionApi.getCurrentPlace(mGoogleApiClient, null));
-                                                }
+                                    new TimerTask() {
+                                        @Override
+                                        public void run() {
+                                            if (checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+                                                pesquisaLugarAtual(Places.PlaceDetectionApi.getCurrentPlace(mGoogleApiClient, null));
                                             }
                                         }
-                                        , 2000);
-                            }
+                                    }
+                                    , 2000);
+                        }
                     });
-        }
-        else{
+        } else {
             pesquisaLugarAtual(Places.PlaceDetectionApi.getCurrentPlace(mGoogleApiClient, null));
         }
 
@@ -156,8 +156,14 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                 }
                 lugares.append("\n\n------------------------------\nMercados\n------------------------------\n");
                 ArrayList<Place> lugaresProvaveis = mercadosPossiveis(likelyPlaces);
-                for (Place p : lugaresProvaveis) {
-                    lugares.append(LocalFactory.montaStringLugar(p));
+                if (lugaresProvaveis.isEmpty()){
+                    lugares.append("Tem certeza que está em um supermercado? \n\n Nós não localizamos, cadastre-o no Google maps para que da próxima vez tenhamos uma ótima experiência.");
+                }
+                else{
+                    for (Place p : lugaresProvaveis) {
+                        lugares.append(LocalFactory.montaStringLugar(p));
+                    }
+
                 }
                 tvLugar.setText(lugares.toString());
                 likelyPlaces.release();
@@ -181,23 +187,47 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         for (PlaceLikelihood placeLikelihood : likelyPlaces) {
             lugaresOrdenadosProb.add(placeLikelihood);
         }
+        /**
+         * Ordena da seguinte maneira:
+         * Um eh maior que o outro quando:
+         *    - a probabilidade eh maior em pelo menos 0.2 (20 pontos percentuais) OU
+         *    - eh supermercado e o outro nao eh
+         *    -
+         */
         Collections.sort(lugaresOrdenadosProb, new Comparator<PlaceLikelihood>() {
             @Override
             public int compare(PlaceLikelihood p1, PlaceLikelihood p2) {
-                return p1.getLikelihood() < p2.getLikelihood() ? -1 : (p1.getLikelihood() > p2.getLikelihood() ? +1 : 0);
+
+                if ((p1.getLikelihood() - p2.getLikelihood() > 0.20)
+                        || (p1.getPlace().getPlaceTypes().contains(Place.TYPE_GROCERY_OR_SUPERMARKET) &&
+                        !p2.getPlace().getPlaceTypes().contains(Place.TYPE_GROCERY_OR_SUPERMARKET))
+                        || (p1.getPlace().getPlaceTypes().contains(Place.TYPE_STORE) &&
+                        !p2.getPlace().getPlaceTypes().contains(Place.TYPE_STORE))
+                        ) {
+                    return +1;
+                }
+                else if ((p2.getLikelihood() - p1.getLikelihood() > 0.20)
+                        || (p2.getPlace().getPlaceTypes().contains(Place.TYPE_GROCERY_OR_SUPERMARKET) &&
+                        !p1.getPlace().getPlaceTypes().contains(Place.TYPE_GROCERY_OR_SUPERMARKET))
+                        || (p2.getPlace().getPlaceTypes().contains(Place.TYPE_STORE) &&
+                        !p1.getPlace().getPlaceTypes().contains(Place.TYPE_STORE))
+                        ) {
+                    return -1;
+                }
+
+                return 0;
             }
         });
 
         ArrayList<Place> lugares = new ArrayList<>();
         for (PlaceLikelihood p : lugaresOrdenadosProb) {
-
-            if (p.getLikelihood() == 0.0 && !lugares.isEmpty()) {
+            if ((p.getLikelihood() > LIMIAR_PERTENCIMENTO_LOCAL && !p.getPlace().getPlaceTypes().contains(Place.TYPE_STORE))
+                    || p.getLikelihood() == 0.0 && !lugares.isEmpty()) {
                 break;
-            }
-            if (p.getPlace().getPlaceTypes().contains(Place.TYPE_ESTABLISHMENT)) {
+            } else if (p.getPlace().getPlaceTypes().contains(Place.TYPE_ESTABLISHMENT)) {
                 if (p.getPlace().getPlaceTypes().contains(Place.TYPE_GROCERY_OR_SUPERMARKET)) {
                     lugares.add(p.getPlace());
-                    if (p.getLikelihood() > 0.85) {
+                    if (p.getLikelihood() > LIMIAR_PERTENCIMENTO_LOCAL) {
                         break;
                     }
 
@@ -209,7 +239,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         }
         return lugares;
     }
-
 
 
     private void salvaMercado(Place lugar, String descricao) {

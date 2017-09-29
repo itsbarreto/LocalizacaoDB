@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -32,12 +33,12 @@ import com.google.firebase.auth.FirebaseUser;
 
 import priceranking.app.italobarreto.localizacaodb.R;
 
+
 /**
  * A login screen that offers login via email/password.
  */
 public class LoginActivity extends AppCompatActivity  {
 
-    private static final int REQUEST_READ_CONTACTS = 0;
     private static final int RC_SIGN_IN = 0;
     private static final String TAG = "Login";
     private static final int LOGIN_FACEBOOK = 0;
@@ -57,7 +58,9 @@ public class LoginActivity extends AppCompatActivity  {
     private CallbackManager callbackManager;
     private FirebaseAuth mAuth;
     private ProgressBar barraDeProgresso;
-
+    private LoginButton btoLoginFB;
+    private Button btoEntdFB;
+    private Button btoEntdGoogle;
     private int tipoDeLogin;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,15 +81,15 @@ public class LoginActivity extends AppCompatActivity  {
     private void configuraLoginFB(){
 
         callbackManager = CallbackManager.Factory.create();
-        LoginButton loginButton = (LoginButton) findViewById(R.id.id_bto_login_fb);
-        loginButton.setOnClickListener(new OnClickListener() {
+        btoLoginFB = (LoginButton) findViewById(R.id.id_bto_login_fb);
+        btoLoginFB.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
                 tipoDeLogin = LOGIN_FACEBOOK;
                 barraDeProgresso.setVisibility(View.VISIBLE);
             }
         });
-        loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+        btoLoginFB.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
 
                     @Override
                     public void onSuccess(LoginResult loginResult) {
@@ -95,15 +98,28 @@ public class LoginActivity extends AppCompatActivity  {
 
                     @Override
                     public void onCancel() {
+
                         barraDeProgresso.setVisibility(View.GONE);
+                        Toast.makeText(LoginActivity.this, "Login com o Facebook cancelado.",
+                                Toast.LENGTH_SHORT).show();
+
                     }
 
                     @Override
                     public void onError(FacebookException exception) {
                         barraDeProgresso.setVisibility(View.GONE);
+                        Toast.makeText(LoginActivity.this, "Falha no login com o Facebook.",
+                                Toast.LENGTH_SHORT).show();
 
                     }
                 });
+        btoEntdFB = (Button) findViewById(R.id.id_bto_entd_fb);
+        btoEntdFB.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                btoLoginFB.performClick();
+            }
+        });
     }
     private void handleFacebookAccessToken(AccessToken token) {
         Log.d(TAG, "handleFacebookAccessToken:" + token);
@@ -123,7 +139,7 @@ public class LoginActivity extends AppCompatActivity  {
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithCredential:failure", task.getException());
-                            Toast.makeText(LoginActivity.this, "Authentication failed.",
+                            Toast.makeText(LoginActivity.this, "Falha no login com o Facebook.",
                                     Toast.LENGTH_SHORT).show();
 
                         }
@@ -141,39 +157,30 @@ public class LoginActivity extends AppCompatActivity  {
                 .enableAutoManage(this /* FragmentActivity */, null /* OnConnectionFailedListener */)
                 .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
                 .build();
-        SignInButton signInButton = (SignInButton) findViewById(R.id.id_bto_login_google);
-        signInButton.setSize(SignInButton.SIZE_STANDARD);
-        findViewById(R.id.id_bto_login_google).setOnClickListener(new OnClickListener() {
+        btoEntdGoogle = (Button) findViewById(R.id.id_bto_entd_google);
+        btoEntdGoogle.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 barraDeProgresso.setVisibility(View.VISIBLE);
-                switch (v.getId()) {
-                    case R.id.id_bto_login_google:
-                        tipoDeLogin = LOGIN_GOOGLE;
-                        signIn();
-                        break;
-                    // ...
-                }
+                tipoDeLogin = LOGIN_GOOGLE;
+                signIn();
 
             }
         });
-
     }
+
+
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
         // Result returned from launching the Intent from GoogleSignInApi.getSignInIntent(...);
-        if(tipoDeLogin == LOGIN_GOOGLE) {
-            if (requestCode == RC_SIGN_IN) {
-                GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
-                handleSignInResult(result);
-
-            }
+        if (requestCode == RC_SIGN_IN) {
+            GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
+            handleSignInResult(result);
         }
-        else if(tipoDeLogin == LOGIN_FACEBOOK){
+        else{
             callbackManager.onActivityResult(requestCode, resultCode, data);
-
         }
 
 
@@ -199,6 +206,7 @@ public class LoginActivity extends AppCompatActivity  {
 
 
     private void direcionaParaMainActivity(String nmUsuario){
+        Toast.makeText(getApplicationContext(),"Login efetiado com sucesso",Toast.LENGTH_LONG);
         Intent myIntent = new Intent(LoginActivity.this, MainActivity.class);
         myIntent.putExtra("usuario", nmUsuario);
         LoginActivity.this.startActivity(myIntent);
