@@ -17,4 +17,5 @@
     <color name="colorPrimaryA700">#0091EA</color>
     <color name="colorPrimaryDark">#01579b</color>
     <color name="colorAccent">#ff4081</color>
+    <color name="amarelo_fundo">#ffeb3b</color>
 </resources>

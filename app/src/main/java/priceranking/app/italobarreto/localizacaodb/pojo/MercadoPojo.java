@@ -12,8 +12,22 @@ public class MercadoPojo {
     private double latitude;
     private String urlImg;
     private String usuIdReg;
+    private String idMercado;
     private long msDateIncl;
     public MercadoPojo() {
+    }
+
+    public MercadoPojo(String nmMercado, String idMercado) {
+        this.nmMercado = nmMercado;
+        this.idMercado = idMercado;
+    }
+
+    public String getIdMercado() {
+        return idMercado;
+    }
+
+    public void setIdMercado(String idMercado) {
+        this.idMercado = idMercado;
     }
 
     public String getNmMercado() {

@@ -654,6 +654,7 @@
     <string name="search_menu_title">Search</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="str_confirm_lclz">Precisamos da sua localização para encontrarmos o mercado.</string>
+    <string name="str_pergunta_estabelecimento">Em qual mercado você está?</string>
     <string name="title_activity_login">Login</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>

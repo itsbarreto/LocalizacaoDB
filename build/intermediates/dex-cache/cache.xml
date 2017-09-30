@@ -2,22 +2,13 @@
 <items version="2" >
 
     <item
-        is-multidex="true"
-        jar="/root/.android/build-cache/be70d0ce42f0803e4e7838fdda580121928a1216/output/jars/classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="/root/.android/build-cache/b3bddcf5cb0393fbd0f4a2854994f0cebabf0654/output/jars/classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="26.0.1"
-        sha1="9cca2818594cc5348806d6662133491e7ea0fa8d">
-        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_b8d5cd907b4e3dfda71dc3feab2d6bd5dc253442/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/root/.android/build-cache/0d1f5415c26ad4b504bb2ebaac0ad48ddb340d46/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.1"
-        sha1="486371f97baad8e607f332f20fee1d3dd00a731a">
-        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_8f46d35aab861606f7a14920d774badad31d239e/classes.dex" />
+        sha1="25438f55fc6d906a0e72f30b21487541430ede43">
+        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/pre-dexed/debug/classes_87dba1b431aa4ef1049cd45b3dc05d0170af2ebb.jar" />
     </item>
     <item
         is-multidex="true"
@@ -25,35 +16,26 @@
         jumboMode="true"
         optimize="true"
         revision="26.0.1"
-        sha1="d3354e016b0b8f93fe01bf65e9e3574399dc9b0f">
+        sha1="08976b6be57915f50480eac621429dc24d17c8eb">
         <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_663a0b0d41831677294f729f258e700afbae03a0/classes.dex" />
     </item>
     <item
-        is-multidex="true"
-        jar="/root/.android/build-cache/162d3ee70e8ddbb936ac89f19967796fe26110fc/output/jars/classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="/root/.android/build-cache/0d1f5415c26ad4b504bb2ebaac0ad48ddb340d46/output/jars/classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="26.0.1"
-        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
-        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_1b44e3fdd79fadc1c9d8ad961bf53f2c001601cb/classes.dex" />
+        sha1="486371f97baad8e607f332f20fee1d3dd00a731a">
+        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/pre-dexed/debug/classes_8f46d35aab861606f7a14920d774badad31d239e.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/root/.android/build-cache/8cd2b344425998437a6a28d53f2dc8abf84e5d21/output/jars/classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="/root/.android/build-cache/d3fd4cc2815b67f25e28f1f071f4da3df9c9b5b7/output/jars/classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="26.0.1"
-        sha1="e96c6974cf924e7ee3b230e6847d5731423388c9">
-        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_eb5ff323970826032a799c176a43fda731ee1989/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/root/.android/build-cache/b3bddcf5cb0393fbd0f4a2854994f0cebabf0654/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.1"
-        sha1="25438f55fc6d906a0e72f30b21487541430ede43">
-        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_87dba1b431aa4ef1049cd45b3dc05d0170af2ebb/classes.dex" />
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/pre-dexed/debug/classes_3d1d5a1ec47f39ea2adfaf44aec8729c5c6e2f61.jar" />
     </item>
     <item
         is-multidex="true"
@@ -65,247 +47,292 @@
         <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_27d80723c47d6de61746095a6351fd4e0e550b30/classes.dex" />
     </item>
     <item
-        is-multidex="true"
-        jar="/root/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-applinks/1.4.0/8ad21bf21784dacce5f2043afb97218cc377e835/bolts-applinks-1.4.0.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="/root/.android/build-cache/be70d0ce42f0803e4e7838fdda580121928a1216/output/jars/classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="26.0.1"
-        sha1="8ad21bf21784dacce5f2043afb97218cc377e835">
-        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/transforms/dex/debug/folders/1000/10/bolts-applinks-1.4.0_b8be5144022e8fb2366e72814320a8797abb6dae/classes.dex" />
+        sha1="9cca2818594cc5348806d6662133491e7ea0fa8d">
+        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/pre-dexed/debug/classes_b8d5cd907b4e3dfda71dc3feab2d6bd5dc253442.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/root/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="/root/.android/build-cache/8cd2b344425998437a6a28d53f2dc8abf84e5d21/output/jars/classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="26.0.1"
-        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
-        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/transforms/dex/debug/folders/1000/10/bolts-tasks-1.4.0_8cb1dcf68d89b3835f6b8620276bad0ce2e75a94/classes.dex" />
+        sha1="e96c6974cf924e7ee3b230e6847d5731423388c9">
+        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/pre-dexed/debug/classes_eb5ff323970826032a799c176a43fda731ee1989.jar" />
     </item>
     <item
-        is-multidex="true"
+        is-multidex="false"
         jar="/root/.android/build-cache/75220c1b8ee1a2111e854a69c5afe6492478cb79/output/jars/classes.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="26.0.1"
         sha1="433f4d6aa5f21f19552afe0e6c5eff0fedba73ad">
-        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_1267bd1ace172b63ba7b1f822a8802600a2f04e1/classes.dex" />
+        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/pre-dexed/debug/classes_1267bd1ace172b63ba7b1f822a8802600a2f04e1.jar" />
     </item>
     <item
-        is-multidex="true"
+        is-multidex="false"
+        jar="/root/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_8cb1dcf68d89b3835f6b8620276bad0ce2e75a94.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/root/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-applinks/1.4.0/8ad21bf21784dacce5f2043afb97218cc377e835/bolts-applinks-1.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="8ad21bf21784dacce5f2043afb97218cc377e835">
+        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/pre-dexed/debug/bolts-applinks-1.4.0_b8be5144022e8fb2366e72814320a8797abb6dae.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/root/.android/build-cache/ca7752b7719277108e1d9f195cdf37f714d01319/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="44a694d4095be84c2888764b1f7256b385c030ad">
+        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/pre-dexed/debug/classes_11b5daed196dd0c8e45285fb7ddc76e7672a8c20.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/root/.android/build-cache/b6b71c7cf192d710e555770cbd13038df346ebc0/output/jars/classes.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="26.0.1"
         sha1="252896ce41f2a84a2849e29235e66098be7d12ee">
-        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_52e0976f062949c3d3fa7d826a37a7df3de4cbf9/classes.dex" />
+        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/pre-dexed/debug/classes_52e0976f062949c3d3fa7d826a37a7df3de4cbf9.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/root/.android/build-cache/6d26a9f55ecbca77034346598fb06535ee2d8d9b/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.1"
-        sha1="b8b26b28aae0ba8e2db55ad9fe0ebc770530c5ef">
-        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_5bda507633f572662644b4dcb3bdd1bef9ca12b7/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/root/.gradle/caches/modules-2/files-2.1/com.google.zxing/core/3.3.0/73c49077166faa4c3c0059c5f583d1d7bd1475fe/core-3.3.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.1"
-        sha1="73c49077166faa4c3c0059c5f583d1d7bd1475fe">
-        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/transforms/dex/debug/folders/1000/10/core-3.3.0_b561d74a94d053f08f5be0983f1911fb2b9624f5/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/root/.android/build-cache/2a640b27dc649d7a414f6f9e0e211ac9bc37cf77/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.1"
-        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
-        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f7df277b356f4b96c25d6d57b0cb5b4f1df6ebc9/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
+        is-multidex="false"
         jar="/root/.android/build-cache/63ff029d8b3a92b6588d686f16e9bca297e91b03/output/jars/classes.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="26.0.1"
         sha1="eb0d830e3eabb9deb9ec44869cf7ac7ea1ad794c">
-        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_fccb9744d7b5d6d31ea20cfbc4c6446dea9e1454/classes.dex" />
+        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/pre-dexed/debug/classes_fccb9744d7b5d6d31ea20cfbc4c6446dea9e1454.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/root/.android/build-cache/d3fd4cc2815b67f25e28f1f071f4da3df9c9b5b7/output/jars/classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="/root/.gradle/caches/modules-2/files-2.1/com.google.zxing/core/3.3.0/73c49077166faa4c3c0059c5f583d1d7bd1475fe/core-3.3.0.jar"
+        jumboMode="false"
         optimize="true"
         revision="26.0.1"
-        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
-        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_3d1d5a1ec47f39ea2adfaf44aec8729c5c6e2f61/classes.dex" />
+        sha1="73c49077166faa4c3c0059c5f583d1d7bd1475fe">
+        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/pre-dexed/debug/core-3.3.0_b561d74a94d053f08f5be0983f1911fb2b9624f5.jar" />
     </item>
     <item
-        is-multidex="true"
+        is-multidex="false"
+        jar="/root/.android/build-cache/6d26a9f55ecbca77034346598fb06535ee2d8d9b/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="b8b26b28aae0ba8e2db55ad9fe0ebc770530c5ef">
+        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/pre-dexed/debug/classes_5bda507633f572662644b4dcb3bdd1bef9ca12b7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/root/.android/build-cache/2a640b27dc649d7a414f6f9e0e211ac9bc37cf77/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/pre-dexed/debug/classes_f7df277b356f4b96c25d6d57b0cb5b4f1df6ebc9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/root/Android/Sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.2/constraint-layout-solver-1.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/pre-dexed/debug/constraint-layout-solver-1.0.2_76f81077aea9bd1699aabfb9818dc8fa3bde44df.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/root/.android/build-cache/162d3ee70e8ddbb936ac89f19967796fe26110fc/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/pre-dexed/debug/classes_1b44e3fdd79fadc1c9d8ad961bf53f2c001601cb.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/root/.android/build-cache/c1b02ae46ef27ccff87ade1acab3bbc0bb30bd16/output/jars/classes.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="26.0.1"
         sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
-        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_958719198aee5c78dfee4aac75f105d1255b88bb/classes.dex" />
+        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/pre-dexed/debug/classes_958719198aee5c78dfee4aac75f105d1255b88bb.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/root/.android/build-cache/c926682191be51748833575737f36a0ef8651814/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.1"
-        sha1="914f5d3e3ace66080e59613708f06d129a222e25">
-        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_a8b22177de9d38fe299f67d279ae59752d7a41a1/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/root/.android/build-cache/95fe6d8f6b0525502c6976c3c9612cd5af82b564/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.1"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_375ad2aa36c919dd057ebb76e954a8ae6b7e4681/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/root/.android/build-cache/1f8ab67927e23a27239d1e7853def14deef4fab5/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.1"
-        sha1="8f128aeeb7e31271b28a7adb9dac1f3a6ed9f5e7">
-        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_b20443a283b864783956c2d917b4ef18eb486440/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/root/.android/build-cache/0d2c92a89168ffc4c1200c8a000c2be7caeaa67b/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.1"
-        sha1="27777b3cad3c20b1acab19f6e37fe3e03371bf6e">
-        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_33c641d975a3ee9dbd8dd354d40cbda64d304904/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/root/.android/build-cache/0b9a261e2e61210bdb3731254867055a079762f2/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.1"
-        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
-        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_8cdfc8a7db8a3e743898ec20d936f9bbb093e8fa/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/root/.android/build-cache/0610466ee72cfd4271da92eeeb261e0c46afd3f0/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.1"
-        sha1="756f6297eef79784f5e356dcd4f39865028b2bd0">
-        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e20959de823154e1e3ae683dc78c2478af9182a0/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
+        is-multidex="false"
         jar="/root/.android/build-cache/2576ef90249523af8d7115fc74469ce08e145cba/output/jars/classes.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="26.0.1"
         sha1="bc9ea2bc291bbebc83f5b160d115c699bddc4e16">
-        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_37cd7553f1c9e1672efcf333f3f0f317cf6f9270/classes.dex" />
+        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/pre-dexed/debug/classes_37cd7553f1c9e1672efcf333f3f0f317cf6f9270.jar" />
     </item>
     <item
-        is-multidex="true"
+        is-multidex="false"
+        jar="/root/.android/build-cache/0610466ee72cfd4271da92eeeb261e0c46afd3f0/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="756f6297eef79784f5e356dcd4f39865028b2bd0">
+        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/pre-dexed/debug/classes_e20959de823154e1e3ae683dc78c2478af9182a0.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/root/.android/build-cache/8ab1cf88df7d0edac9a0ffc7d5e292aa57e6af0a/output/jars/classes.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="26.0.1"
         sha1="8010ae6ed32828a145b25ec97bc07b7a83c6318f">
-        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_bc6d96a3331275d8a5c554da1a82067d52096423/classes.dex" />
+        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/pre-dexed/debug/classes_bc6d96a3331275d8a5c554da1a82067d52096423.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/root/.android/build-cache/638a9c2ff4138fba31b56f6bee5a026f9c9f4432/output/jars/classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="/root/.android/build-cache/95fe6d8f6b0525502c6976c3c9612cd5af82b564/output/jars/classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="26.0.1"
-        sha1="807751a24cf96566fd8675517c94d8463cf364db">
-        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_a64d0a8f749b90f5e7d5fd76ba80a48bdc760b9d/classes.dex" />
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/pre-dexed/debug/classes_375ad2aa36c919dd057ebb76e954a8ae6b7e4681.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/root/.android/build-cache/7db3153fd3e87c1085e86d44ecbbcf8e1b684441/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.1"
-        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
-        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_7c3f386f756b7b5ad127ad2001c6c6450a403e79/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/root/.android/build-cache/322fa46fc542e3911d86b28f08e0b5775c824e5d/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.1"
-        sha1="e2185aff89caeb337b1ffc36d5e525d8318e7cfe">
-        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_a301ab5b1a895977f8e7e7a1284c26856ea74e31/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/root/.android/build-cache/d1744d8d982e32386456d9f0db5b31aed70817bb/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.1"
-        sha1="f3e51e9c5233b8897f61e08a6a27bc36283c2724">
-        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_2c65721466757e028903ea6d7979a15410c5abc1/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/root/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/25.3.1/support-annotations-25.3.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.1"
-        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
-        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.3.1_71603e9186bae46f98999e0a31ed8167b724c574/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/root/.android/build-cache/606e467fc28cbae6a7c779f2369dc9532526636f/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.1"
-        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
-        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_a51427aa3683f3fad2f9bc83b7307b8bd44440e2/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/root/.android/build-cache/547e3b71adbf2dba6439393b00c292859131a3a3/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.1"
-        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
-        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_1d7ba44704c15d87da96265c277f4a0cb43ebfb2/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/root/.android/build-cache/8bfe8396b6b15f40eec01435b1cdf5ad87481e88/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.1"
-        sha1="6116e0e7069de7fc259aac8e08b84f32c2038231">
-        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e5d8151220b001b8c50ae7a8a7e2adcc656cb165/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
+        is-multidex="false"
         jar="/root/.android/build-cache/d2a00f37b65f992a32c326a5185901de53cf299b/output/jars/classes.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="26.0.1"
         sha1="6addaba208e21c6da776d0ca75b6b23a6ccd5499">
-        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_503a62e307937178872aa7d56f74da514db4499e/classes.dex" />
+        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/pre-dexed/debug/classes_503a62e307937178872aa7d56f74da514db4499e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/root/.android/build-cache/0b9a261e2e61210bdb3731254867055a079762f2/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/pre-dexed/debug/classes_8cdfc8a7db8a3e743898ec20d936f9bbb093e8fa.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/root/.android/build-cache/0d2c92a89168ffc4c1200c8a000c2be7caeaa67b/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="27777b3cad3c20b1acab19f6e37fe3e03371bf6e">
+        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/pre-dexed/debug/classes_33c641d975a3ee9dbd8dd354d40cbda64d304904.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/root/.android/build-cache/d1744d8d982e32386456d9f0db5b31aed70817bb/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="f3e51e9c5233b8897f61e08a6a27bc36283c2724">
+        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/pre-dexed/debug/classes_2c65721466757e028903ea6d7979a15410c5abc1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/root/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/25.3.1/support-annotations-25.3.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/pre-dexed/debug/support-annotations-25.3.1_71603e9186bae46f98999e0a31ed8167b724c574.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/root/.android/build-cache/606e467fc28cbae6a7c779f2369dc9532526636f/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/pre-dexed/debug/classes_a51427aa3683f3fad2f9bc83b7307b8bd44440e2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/root/.android/build-cache/322fa46fc542e3911d86b28f08e0b5775c824e5d/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="e2185aff89caeb337b1ffc36d5e525d8318e7cfe">
+        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/pre-dexed/debug/classes_a301ab5b1a895977f8e7e7a1284c26856ea74e31.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/root/.android/build-cache/1f8ab67927e23a27239d1e7853def14deef4fab5/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="8f128aeeb7e31271b28a7adb9dac1f3a6ed9f5e7">
+        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/pre-dexed/debug/classes_b20443a283b864783956c2d917b4ef18eb486440.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/root/.android/build-cache/c926682191be51748833575737f36a0ef8651814/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="914f5d3e3ace66080e59613708f06d129a222e25">
+        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/pre-dexed/debug/classes_a8b22177de9d38fe299f67d279ae59752d7a41a1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/root/.android/build-cache/547e3b71adbf2dba6439393b00c292859131a3a3/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/pre-dexed/debug/classes_1d7ba44704c15d87da96265c277f4a0cb43ebfb2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/root/.android/build-cache/638a9c2ff4138fba31b56f6bee5a026f9c9f4432/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="807751a24cf96566fd8675517c94d8463cf364db">
+        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/pre-dexed/debug/classes_a64d0a8f749b90f5e7d5fd76ba80a48bdc760b9d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/root/.android/build-cache/d0f1bef61d79e438cd07add720eeff16c9132cd3/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/pre-dexed/debug/classes_2a5aa4ae59ee9a51800f6e42dce38565e2d3fc28.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/root/.android/build-cache/7db3153fd3e87c1085e86d44ecbbcf8e1b684441/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/pre-dexed/debug/classes_7c3f386f756b7b5ad127ad2001c6c6450a403e79.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/root/.android/build-cache/8bfe8396b6b15f40eec01435b1cdf5ad87481e88/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="6116e0e7069de7fc259aac8e08b84f32c2038231">
+        <dex dex="/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/pre-dexed/debug/classes_e5d8151220b001b8c50ae7a8a7e2adcc656cb165.jar" />
     </item>
 
 </items>

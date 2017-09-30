@@ -1,39 +1,42 @@
 package priceranking.app.italobarreto.localizacaodb.activities;
 
 import android.Manifest;
+import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
+import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.PendingResult;
 import com.google.android.gms.common.api.ResultCallback;
+import com.google.android.gms.location.LocationListener;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.location.places.Place;
-import com.google.android.gms.location.places.PlaceFilter;
-import com.google.android.gms.location.places.PlaceLikelihood;
 import com.google.android.gms.location.places.PlaceLikelihoodBuffer;
 import com.google.android.gms.location.places.Places;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Date;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -41,12 +44,12 @@ import priceranking.app.italobarreto.localizacaodb.R;
 import priceranking.app.italobarreto.localizacaodb.factories.LocalFactory;
 import priceranking.app.italobarreto.localizacaodb.pojo.MercadoPojo;
 
-public class MainActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener {
+import static priceranking.app.italobarreto.localizacaodb.R.*;
 
-    private final Double LIMIAR_PERTENCIMENTO_LOCAL = 0.80;
+public class MainActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener,
+        LocationListener,
+        GoogleApiClient.ConnectionCallbacks {
 
-    private DatabaseReference dbRef = FirebaseDatabase.getInstance().getReference();
-    private DatabaseReference mercadoReferencia = dbRef.child("mercados");
 
     private FirebaseAuth firebaseAuth;
     private FirebaseUser firebaseUser;
@@ -55,11 +58,15 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 
     private TextView tvUsuario;
     private TextView tvLugar;
+    private TextView tvNomeLugarAtual;
+    private ArrayList<Place> lugaresProvaveis = new ArrayList<>();
+    private ArrayList<MercadoPojo> mercadosProximos = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        setContentView(layout.activity_main);
 
 
         verificacaoDeLogin();
@@ -68,14 +75,33 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 
         //Texto com o nome do usuario
         tvUsuario.setText(firebaseAuth.getCurrentUser().getDisplayName());
+        callConnection();
 
+
+    }
+
+    private synchronized void callConnection() {
         mGoogleApiClient = new GoogleApiClient
                 .Builder(this)
                 .addApi(Places.GEO_DATA_API)
                 .addApi(Places.PLACE_DETECTION_API)
+                .addApi(LocationServices.API)
                 .enableAutoManage(this, this)
+                .addConnectionCallbacks(this)
+                .addOnConnectionFailedListener(this)
                 .build();
-        localizacaoAtual();
+        mGoogleApiClient.connect();
+
+    }
+
+    @Override
+    public void onConnected(@Nullable Bundle bundle) {
+        pedePermissaoLeituraGPS();
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            return;
+        }
+        pesquisaAPIPlaceAtual(Places.PlaceDetectionApi.getCurrentPlace(mGoogleApiClient, null));
+
 
 
     }
@@ -84,11 +110,11 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
     final private int REQUEST_CODE_ASK_PERMISSIONS = 123;
 
 
-    private void localizacaoAtual() {
+    private void pedePermissaoLeituraGPS() {
         int hasWriteContactsPermission = checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION);
         if (hasWriteContactsPermission != PackageManager.PERMISSION_GRANTED) {
             if (!shouldShowRequestPermissionRationale(Manifest.permission.ACCESS_FINE_LOCATION)) {
-                showMessageOKCancel(getString(R.string.str_confirm_lclz),
+                showMessageOKCancel(getString(string.str_confirm_lclz),
                         new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
@@ -113,7 +139,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         if (!enabled) {
             Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
             startActivity(intent);
-            showMessageOKCancel(getString(R.string.str_confirm_lclz),
+            showMessageOKCancel(getString(string.str_confirm_lclz),
                     new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
@@ -123,7 +149,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                                         @Override
                                         public void run() {
                                             if (checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
-                                                pesquisaLugarAtual(Places.PlaceDetectionApi.getCurrentPlace(mGoogleApiClient, null));
+                                                pesquisaCoordenadasGPS();
                                             }
                                         }
                                     }
@@ -131,10 +157,25 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                         }
                     });
         } else {
-            pesquisaLugarAtual(Places.PlaceDetectionApi.getCurrentPlace(mGoogleApiClient, null));
+            pesquisaCoordenadasGPS();
         }
 
     }
+
+    private void showListDialog(String message, DialogInterface.OnClickListener metodoChamadoNoCliqueSobreALinha) {
+        final String[] values = new String[lugaresProvaveis.size()];
+        for (int i =0; i< mercadosProximos.size();i++){
+            values[i] = mercadosProximos.get(i).getNmMercado();
+        }
+        new AlertDialog.Builder(MainActivity.this)
+                .setTitle(message)
+                .setNegativeButton("Cancel", null)
+                .setItems(values, metodoChamadoNoCliqueSobreALinha)
+                .create()
+                .show();
+    }
+
+
 
     private void showMessageOKCancel(String message, DialogInterface.OnClickListener okListener) {
         new AlertDialog.Builder(MainActivity.this)
@@ -145,126 +186,51 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                 .show();
     }
 
-    private void pesquisaLugarAtual(PendingResult<PlaceLikelihoodBuffer> result) {
+    private void pesquisaCoordenadasGPS() {
+        LocationRequest locationRequest = new LocationRequest();
+        locationRequest.setInterval(5000);
+        locationRequest.setFastestInterval(2000);
 
+        locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+
+            return;
+        }
+        try{
+            LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, locationRequest, MainActivity.this);
+
+        }catch(Exception e){
+            Log.i("Localizacao",e.getMessage());
+        }
+
+        LocationServices.FusedLocationApi.removeLocationUpdates(mGoogleApiClient,MainActivity.this);
+    }
+    private void pesquisaAPIPlaceAtual(PendingResult<PlaceLikelihoodBuffer> result) {
         result.setResultCallback(new ResultCallback<PlaceLikelihoodBuffer>() {
             @Override
             public void onResult(PlaceLikelihoodBuffer likelyPlaces) {
-                StringBuffer lugares = new StringBuffer("Todos os lugares");
-                for (PlaceLikelihood placeLikelihood : likelyPlaces) {
-                    lugares.append(LocalFactory.montaStringLugar(placeLikelihood.getPlace(), placeLikelihood.getLikelihood()));
-                }
-                lugares.append("\n\n------------------------------\nMercados\n------------------------------\n");
-                ArrayList<Place> lugaresProvaveis = mercadosPossiveis(likelyPlaces);
+                StringBuffer lugares = new StringBuffer("");
+                lugaresProvaveis = LocalFactory.mercadosPossiveis(likelyPlaces);
                 if (lugaresProvaveis.isEmpty()){
-                    lugares.append("Tem certeza que está em um supermercado? \n\n Nós não localizamos, cadastre-o no Google maps para que da próxima vez tenhamos uma ótima experiência.");
+                    tvNomeLugarAtual.setText("Lugar não encontrado");
+                    lugares.append("Tem certeza que está em um supermercado? \n\nIremos verificar o que aconteceu com nossos servidores.");
                 }
                 else{
                     for (Place p : lugaresProvaveis) {
-                        lugares.append(LocalFactory.montaStringLugar(p));
+                        mercadosProximos.add(new MercadoPojo(p.getName().toString(),p.getId()));
                     }
 
+                    updateUI(0);
                 }
                 tvLugar.setText(lugares.toString());
+                if(mercadosProximos.size()>=2){
+                    configuraAlteracaoLocal();
+                }
                 likelyPlaces.release();
             }
         });
     }
 
-    /**
-     * Percorre os lugares e verifica qual eh o mais provavel de o cliente estar.
-     * Passos:
-     * 01 - Cria <code>ArrayList</code> com os lugares.
-     * 02 - Ordena a lista de forma decrescente.
-     * 03 - Filtra por tipo de lugar.
-     *
-     * @param likelyPlaces
-     * @return : mercado mais provavel
-     */
-    private ArrayList<Place> mercadosPossiveis(PlaceLikelihoodBuffer likelyPlaces) {
-
-        ArrayList<PlaceLikelihood> lugaresOrdenadosProb = new ArrayList<>();
-        for (PlaceLikelihood placeLikelihood : likelyPlaces) {
-            lugaresOrdenadosProb.add(placeLikelihood);
-        }
-        /**
-         * Ordena da seguinte maneira:
-         * Um eh maior que o outro quando:
-         *    - a probabilidade eh maior em pelo menos 0.2 (20 pontos percentuais) OU
-         *    - eh supermercado e o outro nao eh
-         *    -
-         */
-        Collections.sort(lugaresOrdenadosProb, new Comparator<PlaceLikelihood>() {
-            @Override
-            public int compare(PlaceLikelihood p1, PlaceLikelihood p2) {
-
-                if ((p1.getLikelihood() - p2.getLikelihood() > 0.20)
-                        || (p1.getPlace().getPlaceTypes().contains(Place.TYPE_GROCERY_OR_SUPERMARKET) &&
-                        !p2.getPlace().getPlaceTypes().contains(Place.TYPE_GROCERY_OR_SUPERMARKET))
-                        || (p1.getPlace().getPlaceTypes().contains(Place.TYPE_STORE) &&
-                        !p2.getPlace().getPlaceTypes().contains(Place.TYPE_STORE))
-                        ) {
-                    return +1;
-                }
-                else if ((p2.getLikelihood() - p1.getLikelihood() > 0.20)
-                        || (p2.getPlace().getPlaceTypes().contains(Place.TYPE_GROCERY_OR_SUPERMARKET) &&
-                        !p1.getPlace().getPlaceTypes().contains(Place.TYPE_GROCERY_OR_SUPERMARKET))
-                        || (p2.getPlace().getPlaceTypes().contains(Place.TYPE_STORE) &&
-                        !p1.getPlace().getPlaceTypes().contains(Place.TYPE_STORE))
-                        ) {
-                    return -1;
-                }
-
-                return 0;
-            }
-        });
-
-        ArrayList<Place> lugares = new ArrayList<>();
-        for (PlaceLikelihood p : lugaresOrdenadosProb) {
-            if ((p.getLikelihood() > LIMIAR_PERTENCIMENTO_LOCAL && !p.getPlace().getPlaceTypes().contains(Place.TYPE_STORE))
-                    || p.getLikelihood() == 0.0 && !lugares.isEmpty()) {
-                break;
-            } else if (p.getPlace().getPlaceTypes().contains(Place.TYPE_ESTABLISHMENT)) {
-                if (p.getPlace().getPlaceTypes().contains(Place.TYPE_GROCERY_OR_SUPERMARKET)) {
-                    lugares.add(p.getPlace());
-                    if (p.getLikelihood() > LIMIAR_PERTENCIMENTO_LOCAL) {
-                        break;
-                    }
-
-                } else if (p.getPlace().getPlaceTypes().contains(Place.TYPE_STORE)) {
-                    lugares.add(p.getPlace());
-                }
-            }
-
-        }
-        return lugares;
-    }
-
-
-    private void salvaMercado(Place lugar, String descricao) {
-
-        mercadoReferencia.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                Log.i("FIREBASE", dataSnapshot.getValue().toString());
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-                Log.i("FIREBASE_ERRO", databaseError.getMessage());
-            }
-        });
-        MercadoPojo m = new MercadoPojo();
-        m.setLatitude(lugar.getLatLng().latitude);
-        m.setLongitue(lugar.getLatLng().longitude);
-        m.setNmMercado(lugar.getName().toString());
-        m.setUrlImg(descricao);
-        m.setUsuIdReg(firebaseUser.getUid());
-        m.setMsDateIncl(new Date().getTime());
-        mercadoReferencia.child(lugar.getId()).setValue(m);
-
-
-    }
 
 
     /**
@@ -273,8 +239,34 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
     private void configuraElementos() {
         tvUsuario = (TextView) findViewById(R.id.id_nm_usu);
         tvLugar = (TextView) findViewById(R.id.id_tx_local);
+        tvNomeLugarAtual = (TextView) findViewById(R.id.id_tv_lugar_atual);
+        tvNomeLugarAtual.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                configuraAlteracaoLocal();
+            }
+        });
+
     }
 
+    private void configuraAlteracaoLocal(){
+
+        String[] values = new String[lugaresProvaveis.size()];
+        for (int i =0; i< mercadosProximos.size();i++){
+            values[i] = mercadosProximos.get(i).getNmMercado();
+        }
+        showListDialog(getString(string.str_pergunta_estabelecimento), new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                updateUI(which);
+            }
+        });
+    }
+
+
+    private void updateUI(int iItemListaMercadosProximos){
+        tvNomeLugarAtual.setText(mercadosProximos.get(iItemListaMercadosProximos).getNmMercado().toString());
+
+    }
 
     /**
      * Pede para logar caso nao esteja logado.
@@ -294,6 +286,19 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
+        Log.i("Main", connectionResult.getErrorMessage());
         tvLugar.setText("Erro para pegar o lugar\n" + connectionResult.getErrorMessage());
+    }
+
+    @Override
+    public void onLocationChanged(Location location) {
+        pedePermissaoLeituraGPS();
+    }
+
+
+    @Override
+    public void onConnectionSuspended(int i) {
+        Log.i("Main", Integer.toString(i));
+
     }
 }

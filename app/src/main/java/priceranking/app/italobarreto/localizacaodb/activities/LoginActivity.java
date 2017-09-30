@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.facebook.AccessToken;
@@ -62,6 +63,8 @@ public class LoginActivity extends AppCompatActivity  {
     private Button btoEntdFB;
     private Button btoEntdGoogle;
     private int tipoDeLogin;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -210,7 +213,9 @@ public class LoginActivity extends AppCompatActivity  {
         Intent myIntent = new Intent(LoginActivity.this, MainActivity.class);
         myIntent.putExtra("usuario", nmUsuario);
         LoginActivity.this.startActivity(myIntent);
-    }
+        barraDeProgresso.setVisibility(View.VISIBLE);    }
+
+
 
 }
 

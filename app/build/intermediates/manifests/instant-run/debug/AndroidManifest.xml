@@ -40,7 +40,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="priceranking.app.italobarreto.localizacaodb.activities.LoginActivity" >
+        <activity
+            android:name="priceranking.app.italobarreto.localizacaodb.activities.MainActivity"
+            android:screenOrientation="landscape" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -48,7 +50,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="priceranking.app.italobarreto.localizacaodb.activities.MainActivity"
+            android:name="priceranking.app.italobarreto.localizacaodb.activities.LoginActivity"
             android:label="@string/title_activity_login" />
 
         <meta-data

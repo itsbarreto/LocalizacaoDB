@@ -2,6 +2,7 @@
     <string name="app_name">Comprices</string>
     <string name="title_activity_login">Login</string>
     <string name="str_confirm_lclz">Precisamos da sua localização para encontrarmos o mercado.</string>
+    <string name="str_pergunta_estabelecimento">Em qual mercado você está?</string>
 
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
