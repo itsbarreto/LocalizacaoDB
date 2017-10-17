@@ -1,19 +1,19 @@
 [
     {
-        "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/layout/design_bottom_navigation_item.xml",
-        "source": "/root/.android/build-cache/83d7129e09b4ebdca780f322452c37554bc0c4ee/output/res/layout/design_bottom_navigation_item.xml"
-    },
-    {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/layout/notification_template_media.xml",
         "source": "/root/.android/build-cache/0b9a261e2e61210bdb3731254867055a079762f2/output/res/layout/notification_template_media.xml"
     },
     {
-        "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/layout/abc_action_menu_layout.xml",
-        "source": "/root/.android/build-cache/0b9a261e2e61210bdb3731254867055a079762f2/output/res/layout/abc_action_menu_layout.xml"
+        "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/layout/design_bottom_navigation_item.xml",
+        "source": "/root/.android/build-cache/83d7129e09b4ebdca780f322452c37554bc0c4ee/output/res/layout/design_bottom_navigation_item.xml"
     },
     {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/layout/abc_action_bar_view_list_nav_layout.xml",
         "source": "/root/.android/build-cache/0b9a261e2e61210bdb3731254867055a079762f2/output/res/layout/abc_action_bar_view_list_nav_layout.xml"
+    },
+    {
+        "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/layout/abc_action_menu_layout.xml",
+        "source": "/root/.android/build-cache/0b9a261e2e61210bdb3731254867055a079762f2/output/res/layout/abc_action_menu_layout.xml"
     },
     {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/layout/support_simple_spinner_dropdown_item.xml",
@@ -24,16 +24,16 @@
         "source": "/root/.android/build-cache/83d7129e09b4ebdca780f322452c37554bc0c4ee/output/res/layout/design_layout_snackbar.xml"
     },
     {
-        "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view.xml",
-        "source": "/root/.android/build-cache/0b9a261e2e61210bdb3731254867055a079762f2/output/res/layout/abc_activity_chooser_view.xml"
-    },
-    {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/layout/select_dialog_singlechoice_material.xml",
         "source": "/root/.android/build-cache/0b9a261e2e61210bdb3731254867055a079762f2/output/res/layout/select_dialog_singlechoice_material.xml"
     },
     {
+        "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view.xml",
+        "source": "/root/.android/build-cache/0b9a261e2e61210bdb3731254867055a079762f2/output/res/layout/abc_activity_chooser_view.xml"
+    },
+    {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/layout/place_autocomplete_item_powered_by_google.xml",
-        "source": "/root/.android/build-cache/d1744d8d982e32386456d9f0db5b31aed70817bb/output/res/layout/place_autocomplete_item_powered_by_google.xml"
+        "source": "/root/.android/build-cache/b4d51f7f46e8506f5467781619ed0ec37c948f68/output/res/layout/place_autocomplete_item_powered_by_google.xml"
     },
     {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/layout/activity_login.xml",
@@ -121,7 +121,7 @@
     },
     {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/layout/place_autocomplete_progress.xml",
-        "source": "/root/.android/build-cache/d1744d8d982e32386456d9f0db5b31aed70817bb/output/res/layout/place_autocomplete_progress.xml"
+        "source": "/root/.android/build-cache/b4d51f7f46e8506f5467781619ed0ec37c948f68/output/res/layout/place_autocomplete_progress.xml"
     },
     {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/layout/design_layout_snackbar_include.xml",
@@ -189,7 +189,7 @@
     },
     {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/layout/place_autocomplete_item_prediction.xml",
-        "source": "/root/.android/build-cache/d1744d8d982e32386456d9f0db5b31aed70817bb/output/res/layout/place_autocomplete_item_prediction.xml"
+        "source": "/root/.android/build-cache/b4d51f7f46e8506f5467781619ed0ec37c948f68/output/res/layout/place_autocomplete_item_prediction.xml"
     },
     {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/layout/abc_action_bar_up_container.xml",

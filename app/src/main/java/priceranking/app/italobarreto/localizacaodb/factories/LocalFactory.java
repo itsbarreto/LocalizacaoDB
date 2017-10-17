@@ -79,7 +79,7 @@ public class LocalFactory {
      * @param likelyPlaces
      * @return : mercado mais provavel
      */
-    public static ArrayList<Place> mercadosPossiveis(PlaceLikelihoodBuffer likelyPlaces) {
+    public static ArrayList<MercadoPojo> mercadosPossiveis(PlaceLikelihoodBuffer likelyPlaces) {
 
         ArrayList<PlaceLikelihood> lugaresOrdenadosProb = new ArrayList<>();
         for (PlaceLikelihood placeLikelihood : likelyPlaces) {
@@ -115,14 +115,14 @@ public class LocalFactory {
 
                 return 0;
                 */
-                if(p1.getLikelihood() > p2.getLikelihood())return +1;
-                else if (p1.getLikelihood() < p2.getLikelihood())return -1;
+                if(p1.getLikelihood() > p2.getLikelihood())return -1;
+                else if (p1.getLikelihood() < p2.getLikelihood())return +1;
                 return 0;
 
             }
         });
 
-        ArrayList<Place> lugares = new ArrayList<>();
+        ArrayList<MercadoPojo> lugares = new ArrayList<>();
         boolean entrouProbLimiarInferior = false;
         for (PlaceLikelihood p : lugaresOrdenadosProb) {
             if (p.getLikelihood() > LIMIAR_INFERIOR_LOCAL && p.getPlace().getPlaceTypes().contains(Place.TYPE_STORE)){
@@ -130,13 +130,13 @@ public class LocalFactory {
                     continue;
                 }
                 else if (p.getPlace().getPlaceTypes().contains(Place.TYPE_GROCERY_OR_SUPERMARKET)) {
-                    lugares.add(p.getPlace());
+                    lugares.add(new MercadoPojo(p.getPlace().getName().toString(),p.getPlace().getLatLng().longitude,p.getPlace().getLatLng().latitude,p.getPlace().getId().toString()));
                     if (p.getLikelihood() > LIMIAR_PERTENCIMENTO_LOCAL) {
                         break;
                     }
 
                 } else if (p.getPlace().getPlaceTypes().contains(Place.TYPE_STORE)) {
-                    lugares.add(p.getPlace());
+                    lugares.add(new MercadoPojo(p.getPlace().getName().toString(),p.getPlace().getLatLng().longitude,p.getPlace().getLatLng().latitude,p.getPlace().getId().toString()));
                 }
 
             }
@@ -146,7 +146,7 @@ public class LocalFactory {
                     )
 
                     ){
-                lugares.add(p.getPlace());
+                lugares.add(new MercadoPojo(p.getPlace().getName().toString(),p.getPlace().getLatLng().longitude,p.getPlace().getLatLng().latitude,p.getPlace().getId().toString()));
                 entrouProbLimiarInferior = true;
             }
 

@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.facebook.AccessToken;
@@ -22,7 +21,6 @@ import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.auth.api.signin.GoogleSignInResult;
-import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -193,6 +191,7 @@ public class LoginActivity extends AppCompatActivity  {
         if (result.isSuccess()) {
             // Signed in successfully, show authenticated UI.
             GoogleSignInAccount acct = result.getSignInAccount();
+            Log.d("googleSigin", "conta do google: " + acct.getDisplayName());
             direcionaParaMainActivity(acct.getDisplayName());
         } else {
             // Signed out, show unauthenticated UI.
@@ -209,11 +208,12 @@ public class LoginActivity extends AppCompatActivity  {
 
 
     private void direcionaParaMainActivity(String nmUsuario){
-        Toast.makeText(getApplicationContext(),"Login efetiado com sucesso",Toast.LENGTH_LONG);
+        Log.d("googleSigin", "login efetuado, direcionando para main activty");
         Intent myIntent = new Intent(LoginActivity.this, MainActivity.class);
         myIntent.putExtra("usuario", nmUsuario);
         LoginActivity.this.startActivity(myIntent);
-        barraDeProgresso.setVisibility(View.VISIBLE);    }
+        barraDeProgresso.setVisibility(View.VISIBLE);
+    }
 
 
 

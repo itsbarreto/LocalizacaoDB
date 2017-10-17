@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_disabled.xml",
+        "source": "/root/.android/build-cache/e2312bfecf84c9c2dba514bb0f9dfae1e051f02b/output/res/drawable/common_google_signin_btn_icon_disabled.xml"
+    },
+    {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable/abc_ic_clear_material.xml",
         "source": "/root/.android/build-cache/0b9a261e2e61210bdb3731254867055a079762f2/output/res/drawable/abc_ic_clear_material.xml"
     },
@@ -8,12 +12,12 @@
         "source": "/root/.android/build-cache/0b9a261e2e61210bdb3731254867055a079762f2/output/res/drawable/notification_bg_low.xml"
     },
     {
-        "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable/logo001.png",
-        "source": "/home/italo/Projeto/LocalizacaoDB/app/src/main/res/drawable/logo001.png"
-    },
-    {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_light.xml",
         "source": "/root/.android/build-cache/0b9a261e2e61210bdb3731254867055a079762f2/output/res/drawable/abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable/foto_entrada.jpg",
+        "source": "/home/italo/Projeto/LocalizacaoDB/app/src/main/res/drawable/foto_entrada.jpg"
     },
     {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable/com_facebook_auth_dialog_cancel_background.xml",
@@ -28,6 +32,10 @@
         "source": "/root/.android/build-cache/0b9a261e2e61210bdb3731254867055a079762f2/output/res/drawable/abc_ratingbar_small_material.xml"
     },
     {
+        "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable/barra.png",
+        "source": "/home/italo/Projeto/LocalizacaoDB/app/src/main/res/drawable/barra.png"
+    },
+    {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable/abc_vector_test.xml",
         "source": "/root/.android/build-cache/0b9a261e2e61210bdb3731254867055a079762f2/output/res/drawable/abc_vector_test.xml"
     },
@@ -37,7 +45,11 @@
     },
     {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_light.xml",
-        "source": "/root/.android/build-cache/b3bddcf5cb0393fbd0f4a2854994f0cebabf0654/output/res/drawable/common_google_signin_btn_text_light.xml"
+        "source": "/root/.android/build-cache/e2312bfecf84c9c2dba514bb0f9dfae1e051f02b/output/res/drawable/common_google_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable/fundo_barcode.png",
+        "source": "/home/italo/Projeto/LocalizacaoDB/app/src/main/res/drawable/fundo_barcode.png"
     },
     {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable/abc_tab_indicator_material.xml",
@@ -61,7 +73,11 @@
     },
     {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_dark.xml",
-        "source": "/root/.android/build-cache/b3bddcf5cb0393fbd0f4a2854994f0cebabf0654/output/res/drawable/common_google_signin_btn_icon_dark.xml"
+        "source": "/root/.android/build-cache/e2312bfecf84c9c2dba514bb0f9dfae1e051f02b/output/res/drawable/common_google_signin_btn_icon_dark.xml"
+    },
+    {
+        "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_light_normal.xml",
+        "source": "/root/.android/build-cache/e2312bfecf84c9c2dba514bb0f9dfae1e051f02b/output/res/drawable/common_google_signin_btn_text_light_normal.xml"
     },
     {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable/abc_btn_default_mtrl_shape.xml",
@@ -73,7 +89,7 @@
     },
     {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_dark_focused.xml",
-        "source": "/root/.android/build-cache/b3bddcf5cb0393fbd0f4a2854994f0cebabf0654/output/res/drawable/common_google_signin_btn_text_dark_focused.xml"
+        "source": "/root/.android/build-cache/e2312bfecf84c9c2dba514bb0f9dfae1e051f02b/output/res/drawable/common_google_signin_btn_text_dark_focused.xml"
     },
     {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background.xml",
@@ -81,7 +97,7 @@
     },
     {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_light_focused.xml",
-        "source": "/root/.android/build-cache/b3bddcf5cb0393fbd0f4a2854994f0cebabf0654/output/res/drawable/common_google_signin_btn_text_light_focused.xml"
+        "source": "/root/.android/build-cache/e2312bfecf84c9c2dba514bb0f9dfae1e051f02b/output/res/drawable/common_google_signin_btn_text_light_focused.xml"
     },
     {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable/design_snackbar_background.xml",
@@ -89,7 +105,7 @@
     },
     {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_dark.xml",
-        "source": "/root/.android/build-cache/b3bddcf5cb0393fbd0f4a2854994f0cebabf0654/output/res/drawable/common_google_signin_btn_text_dark.xml"
+        "source": "/root/.android/build-cache/e2312bfecf84c9c2dba514bb0f9dfae1e051f02b/output/res/drawable/common_google_signin_btn_text_dark.xml"
     },
     {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_indicator_material.xml",
@@ -104,6 +120,10 @@
         "source": "/root/.android/build-cache/6d26a9f55ecbca77034346598fb06535ee2d8d9b/output/res/drawable/com_facebook_button_login_logo.xml"
     },
     {
+        "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable/icone002_b.png",
+        "source": "/home/italo/Projeto/LocalizacaoDB/app/src/main/res/drawable/icone002_b.png"
+    },
+    {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_dark.xml",
         "source": "/root/.android/build-cache/0b9a261e2e61210bdb3731254867055a079762f2/output/res/drawable/abc_item_background_holo_dark.xml"
     },
@@ -114,6 +134,14 @@
     {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable/abc_ic_go_search_api_material.xml",
         "source": "/root/.android/build-cache/0b9a261e2e61210bdb3731254867055a079762f2/output/res/drawable/abc_ic_go_search_api_material.xml"
+    },
+    {
+        "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable/icon_mudanca.png",
+        "source": "/home/italo/Projeto/LocalizacaoDB/app/src/main/res/drawable/icon_mudanca.png"
+    },
+    {
+        "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_disabled.xml",
+        "source": "/root/.android/build-cache/e2312bfecf84c9c2dba514bb0f9dfae1e051f02b/output/res/drawable/common_google_signin_btn_text_disabled.xml"
     },
     {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_top_material.xml",
@@ -136,6 +164,10 @@
         "source": "/root/.android/build-cache/0b9a261e2e61210bdb3731254867055a079762f2/output/res/drawable/abc_spinner_textfield_background_material.xml"
     },
     {
+        "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable/icone005.png",
+        "source": "/home/italo/Projeto/LocalizacaoDB/app/src/main/res/drawable/icone005.png"
+    },
+    {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_tick_mark_material.xml",
         "source": "/root/.android/build-cache/0b9a261e2e61210bdb3731254867055a079762f2/output/res/drawable/abc_seekbar_tick_mark_material.xml"
     },
@@ -148,6 +180,10 @@
         "source": "/root/.android/build-cache/0b9a261e2e61210bdb3731254867055a079762f2/output/res/drawable/abc_ic_voice_search_api_material.xml"
     },
     {
+        "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable/icon_google_32.png",
+        "source": "/home/italo/Projeto/LocalizacaoDB/app/src/main/res/drawable/icon_google_32.png"
+    },
+    {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable/abc_switch_thumb_material.xml",
         "source": "/root/.android/build-cache/0b9a261e2e61210bdb3731254867055a079762f2/output/res/drawable/abc_switch_thumb_material.xml"
     },
@@ -156,12 +192,20 @@
         "source": "/root/.android/build-cache/b6b71c7cf192d710e555770cbd13038df346ebc0/output/res/drawable/com_facebook_button_icon.xml"
     },
     {
+        "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable/f_facebook_32.png",
+        "source": "/home/italo/Projeto/LocalizacaoDB/app/src/main/res/drawable/f_facebook_32.png"
+    },
+    {
+        "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable/botao_app.png",
+        "source": "/home/italo/Projeto/LocalizacaoDB/app/src/main/res/drawable/botao_app.png"
+    },
+    {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_light.xml",
-        "source": "/root/.android/build-cache/b3bddcf5cb0393fbd0f4a2854994f0cebabf0654/output/res/drawable/common_google_signin_btn_icon_light.xml"
+        "source": "/root/.android/build-cache/e2312bfecf84c9c2dba514bb0f9dfae1e051f02b/output/res/drawable/common_google_signin_btn_icon_light.xml"
     },
     {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_light_focused.xml",
-        "source": "/root/.android/build-cache/b3bddcf5cb0393fbd0f4a2854994f0cebabf0654/output/res/drawable/common_google_signin_btn_icon_light_focused.xml"
+        "source": "/root/.android/build-cache/e2312bfecf84c9c2dba514bb0f9dfae1e051f02b/output/res/drawable/common_google_signin_btn_icon_light_focused.xml"
     },
     {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable/notification_bg.xml",
@@ -178,6 +222,10 @@
     {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable/navigation_empty_icon.xml",
         "source": "/root/.android/build-cache/83d7129e09b4ebdca780f322452c37554bc0c4ee/output/res/drawable/navigation_empty_icon.xml"
+    },
+    {
+        "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_dark_normal.xml",
+        "source": "/root/.android/build-cache/e2312bfecf84c9c2dba514bb0f9dfae1e051f02b/output/res/drawable/common_google_signin_btn_icon_dark_normal.xml"
     },
     {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable/com_facebook_auth_dialog_header_background.xml",
@@ -213,11 +261,15 @@
     },
     {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_dark_focused.xml",
-        "source": "/root/.android/build-cache/b3bddcf5cb0393fbd0f4a2854994f0cebabf0654/output/res/drawable/common_google_signin_btn_icon_dark_focused.xml"
+        "source": "/root/.android/build-cache/e2312bfecf84c9c2dba514bb0f9dfae1e051f02b/output/res/drawable/common_google_signin_btn_icon_dark_focused.xml"
     },
     {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable/abc_ic_search_api_material.xml",
         "source": "/root/.android/build-cache/0b9a261e2e61210bdb3731254867055a079762f2/output/res/drawable/abc_ic_search_api_material.xml"
+    },
+    {
+        "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_light_normal.xml",
+        "source": "/root/.android/build-cache/e2312bfecf84c9c2dba514bb0f9dfae1e051f02b/output/res/drawable/common_google_signin_btn_icon_light_normal.xml"
     },
     {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable/notification_icon_background.xml",
@@ -226,6 +278,10 @@
     {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_dark.xml",
         "source": "/root/.android/build-cache/0b9a261e2e61210bdb3731254867055a079762f2/output/res/drawable/abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_dark_normal.xml",
+        "source": "/root/.android/build-cache/e2312bfecf84c9c2dba514bb0f9dfae1e051f02b/output/res/drawable/common_google_signin_btn_text_dark_normal.xml"
     },
     {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable/abc_ic_arrow_drop_right_black_24dp.xml",

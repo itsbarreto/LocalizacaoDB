@@ -1,7 +1,5 @@
 package priceranking.app.italobarreto.localizacaodb.pojo;
 
-import java.util.Date;
-
 /**
  * Created by root on 26/09/17.
  */
@@ -19,6 +17,13 @@ public class MercadoPojo {
 
     public MercadoPojo(String nmMercado, String idMercado) {
         this.nmMercado = nmMercado;
+        this.idMercado = idMercado;
+    }
+
+    public MercadoPojo(String nmMercado, double longitue, double latitude, String idMercado) {
+        this.nmMercado = nmMercado;
+        this.longitue = longitue;
+        this.latitude = latitude;
         this.idMercado = idMercado;
     }
 

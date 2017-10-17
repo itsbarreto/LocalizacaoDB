@@ -13,7 +13,7 @@
     },
     {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/powered_by_google_light.png",
-        "source": "/root/.android/build-cache/d1744d8d982e32386456d9f0db5b31aed70817bb/output/res/drawable-mdpi-v4/powered_by_google_light.png"
+        "source": "/root/.android/build-cache/b4d51f7f46e8506f5467781619ed0ec37c948f68/output/res/drawable-mdpi-v4/powered_by_google_light.png"
     },
     {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/com_facebook_button_icon_white.png",
@@ -25,7 +25,7 @@
     },
     {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/powered_by_google_dark.png",
-        "source": "/root/.android/build-cache/d1744d8d982e32386456d9f0db5b31aed70817bb/output/res/drawable-mdpi-v4/powered_by_google_dark.png"
+        "source": "/root/.android/build-cache/b4d51f7f46e8506f5467781619ed0ec37c948f68/output/res/drawable-mdpi-v4/powered_by_google_dark.png"
     },
     {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_list_selector_disabled_holo_dark.9.png",
@@ -42,6 +42,10 @@
     {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_btn_check_to_on_mtrl_000.png",
         "source": "/root/.android/build-cache/0b9a261e2e61210bdb3731254867055a079762f2/output/res/drawable-mdpi-v4/abc_btn_check_to_on_mtrl_000.png"
+    },
+    {
+        "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/googleg_disabled_color_18.png",
+        "source": "/root/.android/build-cache/e2312bfecf84c9c2dba514bb0f9dfae1e051f02b/output/res/drawable-mdpi-v4/googleg_disabled_color_18.png"
     },
     {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png",
@@ -78,6 +82,10 @@
     {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/com_facebook_button_like_icon_selected.png",
         "source": "/root/.android/build-cache/b6b71c7cf192d710e555770cbd13038df346ebc0/output/res/drawable-mdpi-v4/com_facebook_button_like_icon_selected.png"
+    },
+    {
+        "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/googleg_standard_color_18.png",
+        "source": "/root/.android/build-cache/e2312bfecf84c9c2dba514bb0f9dfae1e051f02b/output/res/drawable-mdpi-v4/googleg_standard_color_18.png"
     },
     {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/notification_bg_low_normal.9.png",
@@ -157,7 +165,15 @@
     },
     {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/places_ic_clear.png",
-        "source": "/root/.android/build-cache/d1744d8d982e32386456d9f0db5b31aed70817bb/output/res/drawable-mdpi-v4/places_ic_clear.png"
+        "source": "/root/.android/build-cache/b4d51f7f46e8506f5467781619ed0ec37c948f68/output/res/drawable-mdpi-v4/places_ic_clear.png"
+    },
+    {
+        "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png",
+        "source": "/root/.android/build-cache/e2312bfecf84c9c2dba514bb0f9dfae1e051f02b/output/res/drawable-mdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png"
+    },
+    {
+        "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png",
+        "source": "/root/.android/build-cache/e2312bfecf84c9c2dba514bb0f9dfae1e051f02b/output/res/drawable-mdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png"
     },
     {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/com_facebook_tooltip_blue_bottomnub.png",
@@ -180,8 +196,16 @@
         "source": "/root/.android/build-cache/0b9a261e2e61210bdb3731254867055a079762f2/output/res/drawable-mdpi-v4/abc_btn_radio_to_on_mtrl_015.png"
     },
     {
+        "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_google_signin_btn_text_light_normal_background.9.png",
+        "source": "/root/.android/build-cache/e2312bfecf84c9c2dba514bb0f9dfae1e051f02b/output/res/drawable-mdpi-v4/common_google_signin_btn_text_light_normal_background.9.png"
+    },
+    {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_switch_track_mtrl_alpha.9.png",
         "source": "/root/.android/build-cache/0b9a261e2e61210bdb3731254867055a079762f2/output/res/drawable-mdpi-v4/abc_switch_track_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png",
+        "source": "/root/.android/build-cache/e2312bfecf84c9c2dba514bb0f9dfae1e051f02b/output/res/drawable-mdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png"
     },
     {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/com_facebook_tooltip_black_xout.png",
@@ -277,7 +301,7 @@
     },
     {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/places_ic_search.png",
-        "source": "/root/.android/build-cache/d1744d8d982e32386456d9f0db5b31aed70817bb/output/res/drawable-mdpi-v4/places_ic_search.png"
+        "source": "/root/.android/build-cache/b4d51f7f46e8506f5467781619ed0ec37c948f68/output/res/drawable-mdpi-v4/places_ic_search.png"
     },
     {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/design_ic_visibility_off.png",

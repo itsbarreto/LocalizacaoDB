@@ -8,7 +8,23 @@
         "source": "/home/italo/Projeto/LocalizacaoDB/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
     },
     {
+        "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/mipmap-xhdpi/icone004.png",
+        "source": "/home/italo/Projeto/LocalizacaoDB/app/src/main/res/mipmap-xhdpi/icone004.png"
+    },
+    {
+        "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/mipmap-xhdpi/icone002.png",
+        "source": "/home/italo/Projeto/LocalizacaoDB/app/src/main/res/mipmap-xhdpi/icone002.png"
+    },
+    {
+        "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/mipmap-xhdpi/icone005.png",
+        "source": "/home/italo/Projeto/LocalizacaoDB/app/src/main/res/mipmap-xhdpi/icone005.png"
+    },
+    {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/mipmap-xhdpi/logo001.png",
         "source": "/home/italo/Projeto/LocalizacaoDB/app/src/main/res/mipmap-xhdpi/logo001.png"
+    },
+    {
+        "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/mipmap-xhdpi/icone003.png",
+        "source": "/home/italo/Projeto/LocalizacaoDB/app/src/main/res/mipmap-xhdpi/icone003.png"
     }
 ]

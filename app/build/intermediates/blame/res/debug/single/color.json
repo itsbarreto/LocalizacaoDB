@@ -45,11 +45,15 @@
     },
     {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_text_dark.xml",
-        "source": "/root/.android/build-cache/b3bddcf5cb0393fbd0f4a2854994f0cebabf0654/output/res/color/common_google_signin_btn_text_dark.xml"
+        "source": "/root/.android/build-cache/e2312bfecf84c9c2dba514bb0f9dfae1e051f02b/output/res/color/common_google_signin_btn_text_dark.xml"
     },
     {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_text_light.xml",
-        "source": "/root/.android/build-cache/b3bddcf5cb0393fbd0f4a2854994f0cebabf0654/output/res/color/common_google_signin_btn_text_light.xml"
+        "source": "/root/.android/build-cache/e2312bfecf84c9c2dba514bb0f9dfae1e051f02b/output/res/color/common_google_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_tint.xml",
+        "source": "/root/.android/build-cache/e2312bfecf84c9c2dba514bb0f9dfae1e051f02b/output/res/color/common_google_signin_btn_tint.xml"
     },
     {
         "merged": "/home/italo/Projeto/LocalizacaoDB/app/build/intermediates/res/merged/debug/color/design_error.xml",

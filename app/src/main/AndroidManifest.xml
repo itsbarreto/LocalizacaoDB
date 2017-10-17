@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="priceranking.app.italobarreto.localizacaodb">
+    package="priceranking.app.italobarreto.localizacaodb"
+
+
+    android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
     <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -26,8 +29,8 @@
         </activity>
         <activity
             android:name=".activities.LoginActivity"
-            android:label="@string/title_activity_login" />
-
+            android:label="@string/title_activity_login" >
+        </activity>
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyCAxhFwPqsBntg-OCppvBqsmwH4otSy72M" />
